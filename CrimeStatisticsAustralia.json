@@ -9,7 +9,7 @@
     "layer": [ 
         {
             "data": {
-                "url": "ne_1.json",
+                "url": "https://github.com/LeonMa2001/Crime-Statistics-Australia/blob/main/ne_1.json",
                 "format": {
                     "type": "topojson",
                     "feature": "ne_110m_admin_0_countries"
@@ -23,7 +23,7 @@
         },
         {
             "data": {
-                "url": "data-sa-crime-2023-24-full-fy.csv",  
+                "url": "https://github.com/LeonMa2001/Crime-Statistics-Australia/blob/main/data-sa-crime-2023-24-full-fy.csv",  
                 "format": {"type": "csv"} 
             },
             "mark": {
