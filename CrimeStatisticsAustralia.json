@@ -3,6 +3,7 @@
     "width": 800,
     "height": 450,
     "title": "Crime Statistics of Australia 2023-2024",
+<<<<<<< HEAD
     "projection": {
         "type": "equirectangular"
     },
@@ -21,6 +22,17 @@
                 "stroke": "white"
             }
         }
+=======
+    "projection": {"type": "equirectangular"},
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/LeonMa2001/Crime-Statistics-Australia/refs/heads/main/SA4_2021_AUST_GDA2020.json",
+          "format": {"type": "topojson", "feature": "SA4_2021_AUST_GDA2020"}
+        },
+        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+      }
+>>>>>>> 4ac5255c5f90a93bb8c4057c49ee0e76bbc1b80b
     ]
-}
+  } 
             
