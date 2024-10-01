@@ -7,16 +7,21 @@
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/LeonMa2001/Crime-Statistics-Australia/refs/heads/main/SA3_2021_AUST_GDA2020.json",
+        "url": "https://raw.githubusercontent.com/LeonMa2001/Healthsite/refs/heads/main/Australia_Map.json",
         "format": {"type": "topojson", "feature": "SA3_2021_AUST_GDA2020"}
       },
       "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/LeonMa2001/Crime-Statistics-Australia/refs/heads/main/Healthsite_Australia_data.csv",
+        "url": "https://raw.githubusercontent.com/LeonMa2001/Healthsite/refs/heads/main/Healthsite_Australia_data.csv",
         "format": {"type": "csv"}
       },
+      "transform": [
+        {"filter": "datum.X != null && datum.Y != null"},
+        {"filter": "datum.X > 110 && datum.X < 160"},
+        {"filter": "datum.Y > -45 && datum.Y < -11"}
+      ],
       "mark": {"type": "circle", "tooltip": {"content": "data"}},
       "encoding": {
         "longitude": {"field": "X", "type": "quantitative"},
@@ -25,7 +30,8 @@
           {"field": "name", "type": "nominal", "title": "Name"},
           {"field": "amenity", "type": "nominal", "title": "Amenity"},
           {"field": "healthcare", "type": "nominal", "title": "Healthcare Type"},
-          {"field": "addr_city", "type": "nominal", "title": "City"}
+          {"field": "X", "type": "nominal", "title": "x"},
+          {"field": "Y", "type": "nominal", "title": "y"}
         ],
         "size": {"value": 100},
         "color": {"value": "blue"}
