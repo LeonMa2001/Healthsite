@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 450,
+  "title": "Healthsites of Australia 2023-2024",
+  "projection": {"type": "equirectangular"},
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/LeonMa2001/Crime-Statistics-Australia/refs/heads/main/SA3_2021_AUST_GDA2020.json",
+        "format": {"type": "topojson", "feature": "SA3_2021_AUST_GDA2020"}
+      },
+      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+    },
+    {
+      "data": {
+        "url": "Healthsite_Australia_data.csv",
+        "format": {"type": "csv"}
+      },
+      "mark": {"type": "circle", "tooltip": {"content": "data"}},
+      "encoding": {
+        "longitude": {"field": "X", "type": "quantitative"},
+        "latitude": {"field": "Y", "type": "quantitative"},
+        "tooltip": [
+          {"field": "name", "type": "nominal", "title": "Name"},
+          {"field": "amenity", "type": "nominal", "title": "Amenity"},
+          {"field": "healthcare", "type": "nominal", "title": "Healthcare Type"},
+          {"field": "addr_city", "type": "nominal", "title": "City"}
+        ],
+        "size": {"value": 100},
+        "color": {"value": "blue"}
+      }
+    }
+  ]
+} 
