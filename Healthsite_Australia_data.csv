@@ -5503,7 +5503,6 @@ X,Y,osm_id,osm_type,completeness,amenity,healthcare,name,operator,source,special
 144.989687476514,-37.7894985247597,"4067821750",node,18.75,,alternative,Clifton Hill Chiropractic,,,chiropractic,,,,,,,,,,,,,,,,,"105",Queens Parade,,,143964249,4,2023/11/13 10:33:21+00,41fbbcb8d33a4b66bfe055e7edf24888
 152.899831993714,-31.4351824227843,"3743532927",node,25,pharmacy,pharmacy,Chemmart Pharmacy,,,,,,,,,,,,,,,,,,,,"158",Gordon Street,"2444",Port Macquarie,81812819,2,2020/03/05 08:49:31+00,4fe0de03414d48b081f9dcd7d524e3e4
 115.791054186258,-32.0889167232239,"2337818728",node,6.25,doctors,,,,,,,,,,,,,,,,,,,,,,,,,,16476927,1,2013/06/09 05:45:28+00,7060c801db764de18bd7062c9c62e894
-105.673780387524,-10.4205054483343,"2119308067",node,25,pharmacy,pharmacy,Island Pharmacy and News,,survey,,,,,,,,,yes,,,,,,,,,,Gaze Road,"6798",,113179046,3,2021/10/31 03:58:55+00,da1827a2f5144968abb84f3eff324b0e
 145.239231737596,-37.98515720672,"1453190623",node,6.25,pharmacy,,,,,,,,,,,,,,,,,,,,,,,,,,9456162,1,2011/10/03 00:06:16+00,ed32868a410d4822a688405c6f33f5d8
 115.79518495578,-32.0335736149591,"9724237817",node,12.5,dentist,dentist,Attadale Dental Centre,,,,,,,,,,,,,,,,,,,,,,,,135525280,4,2023/04/30 06:42:35+00,53c6c85980f9468488fa947a03bb2bc0
 ,,"537404021",way,18.75,clinic,clinic,Gastro Medicine & Endoscopy,,,,,,,,,,,,,,,,,,,,"17",Windsor Avenue,,,96583109,3,2020/12/29 08:10:57+00,23846d8beb734e93a0045b5cd1a77e4e
@@ -9302,7 +9301,6 @@ X,Y,osm_id,osm_type,completeness,amenity,healthcare,name,operator,source,special
 ,,"545775020",way,15.625,hospital,hospital,Williamstown Hospital,,,,,,,,,,,,,yes,,,,,,,,,,,83613346,2,2020/04/15 21:17:03+00,e91d710d54084dfba621e404d9e5de03
 145.167598316695,-37.8767370377135,"3390465541",node,15.625,doctors,doctor,Fairhills Medical Centre,,survey,,,,,,,,,,,,,,,,,,,,,,117225280,2,2022/02/10 02:49:51+00,dbdd3f1874584d06843616de0c18452f
 151.285325730047,-33.795368273752,"6308141948",node,28.125,dentist,dentist,Dentists Manly – Dr. Pechar and Associates,Dr Daniel Pechar,,,,,"Mo-We 08:00-18:00, Tu 08:00-20:00, Fr 08:00-17:00, Sa 08:00-15:00",,,,,,,,,,,,,,2-10,Pittwater Road,"2095",,67650832,1,2019/02/28 13:14:25+00,02508d5ee6da4a1b892f44542ef52d1a
-167.947574172198,-29.0308656001508,"3514370471",node,9.375,hospital,,Norfolk Island Hospital,,,,,,,,,,,,,,,,,,,,,,,,31093097,1,2015/05/13 09:45:15+00,28606afc76d64f8196e899d58a0d757e
 153.414688049214,-27.9685119274408,"5035371028",node,25,pharmacy,pharmacy,Chemist Warehouse,,,,,,,,,,,yes,,,,,,,,,"87",Scarborough Street,"4215",,134751836,5,2023/04/10 23:13:03+00,c5fe5924e0124f368a94eca0b6463286
 145.089704536132,-38.1831228398907,"7834107224",node,15.625,,optometrist,Mt Eliza Optical,,,,,,,,,,,,,,,,,,,,"89",Mount Eliza Way,,,115858005,2,2022/01/07 00:22:39+00,48661862ce2b40a9bb98fab8568f880f
 115.849542268412,-32.0408137352823,"292194303",node,12.5,pharmacy,pharmacy,,,,,,,,,,,,yes,,,,,,,,,,,,,120521451,5,2022/05/04 02:50:52+00,df46fb2bcdde47ffaabac04178b2d006
@@ -9614,4 +9612,3 @@ X,Y,osm_id,osm_type,completeness,amenity,healthcare,name,operator,source,special
 ,,"266719225",way,25,dentist,dentist,Garden Street Dental,,,,,,,,,,,,,,,,,,,,"36",Garden Street,"3220",Geelong,104362925,4,2021/05/08 12:16:57+00,ea16edcc630a40e0a28acf780d141a08
 151.645599542098,-32.9735123578481,"3938999506",node,12.5,doctors,doctor,Warners Bay Medical Centre,,,,,,,,,,,,,,,,,,,,,,,,87542057,2,2020/07/04 21:48:51+00,d773963d7b164c4ab9ec9226e8630910
 ,,"779263952",way,21.875,doctors,doctor,Westmed Medical Centre,,,,,,,,,,,,,,,,,,,,"95",Droop Street,"3011",,111798967,3,2021/09/28 06:06:18+00,0cc4d550224e4247a8ae1fb2b78b00e0
-,,"1232570066",way,12.5,clinic,clinic,Shepparton Women's Health Centre,,,,,,,,,,,,,,,,,,,,,,,,145313806,1,2023/12/20 03:10:21+00,6bc23a7e57ad45e0991b76ab9dbd441b

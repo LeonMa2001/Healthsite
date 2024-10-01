@@ -14,7 +14,7 @@
     },
     {
       "data": {
-        "url": "Healthsite_Australia_data.csv",
+        "url": "https://raw.githubusercontent.com/LeonMa2001/Crime-Statistics-Australia/refs/heads/main/Healthsite_Australia_data.csv",
         "format": {"type": "csv"}
       },
       "mark": {"type": "circle", "tooltip": {"content": "data"}},
