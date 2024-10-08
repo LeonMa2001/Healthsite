@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Proportion of people with long-term health conditions (%) across states",
+    "description": "Proportion of adults aged 18 years and over by health risk factors (%) across states",
     "data": {
-        "url": "https://raw.githubusercontent.com/LeonMa2001/Healthsite/refs/heads/main/Proportion%20of%20people%20with%20long-term%20health%20conditions%20(%25).csv",
+        "url": "https://raw.githubusercontent.com/LeonMa2001/Healthsite/refs/heads/main/Proportion%20of%20adults%20aged%2018%20years%20and%20over%20by%20health%20risk%20factors%20(%25).csv",
         "format": {
             "type": "csv"
         }

@@ -1,8 +1,8 @@
 // Path to your external JSON file
-const jsonFile = 'Healthsites.json';
+const healthsiteJsonFile = 'Healthsites.json';
 
 // Fetch the Vega-Lite specification from the external JSON file
-fetch(jsonFile)
+fetch(healthsiteJsonFile)
     .then(response => response.json())
     .then(spec => {
         // Embed the fetched Vega-Lite specification into the div with id 'HealthsitesMap'
