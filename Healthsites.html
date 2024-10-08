@@ -9,14 +9,60 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.21.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.26.0"></script>
 
+    <style>
+        body {
+            margin: 0;
+        }
+
+        h1 {
+            background-color: blue;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: row;
+            height: calc(100vh - 60px);
+        }
+
+        #HealthsitesMap {
+            flex: 2;
+            height: 100%;
+        }
+
+        #rightDiv {
+            flex: 1;
+            background-color: lightgray;
+            padding: 20px;
+            height: 85%;
+            overflow-y: auto;
+        }
+    </style>
+
     <title>Healthsites of Australia</title>
 </head>
 
 <body>
-    <h1>Healthsites Testing</h1>
-    
-    <div id="HealthsitesMap">
-    </div> 
+    <h1>Healthsites Of Australia</h1>
+
+    <div id="container">
+        <div id="HealthsitesMap">
+        </div> 
+
+        <div id="rightDiv">
+            <h2>Healthsite Mapped on Australia</h2>
+            <p>
+                This map visualisation initially illustrates all of the accumilated data 
+                points of healthsites listed in the dataset. It plots it onto the Australian 
+                map which also includes filters to be able to search for specific healthsite 
+                types.
+            </p>
+        </div>
+    </div>
+
+    <h2>TESTING</h2>>
 
     <script src="Healthsites.js"></script>
 </body>
