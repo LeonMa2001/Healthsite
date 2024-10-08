@@ -18,7 +18,7 @@
             background-color: blue;
             color: white;
             padding: 20px;
-            text-align: center;
+            text-align: left;
         }
 
         #container {
@@ -39,6 +39,24 @@
             height: 85%;
             overflow-y: auto;
         }
+
+        #splitContainer {
+            display: flex;
+            background-color: lightgray;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .splitDiv {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        #conditionsChart {
+            width: 100%;
+            height: 400px;
+        }
+
     </style>
 
     <title>Healthsites of Australia</title>
@@ -62,8 +80,20 @@
         </div>
     </div>
 
-    <h2>TESTING</h2>>
+    <h1>Need for healthsites per state</h1>
+
+    <div id="splitContainer">
+        <div class="splitDiv">
+            <h3>Left Div</h3>
+            <div id="chart"></div>
+        </div>
+        <div class="splitDiv">
+            <h3>Right Div</h3>
+            <p>This is the right div content.</p>
+        </div>
+    </div>
 
     <script src="Healthsites.js"></script>
+    <script src="Conditions.js"></script>
 </body>
 </html>

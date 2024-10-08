@@ -1,0 +1,21 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Proportion of people with long-term health conditions (%) across states",
+    "data": {
+        "url": "Proportion_of_people_with_long-term_health_conditions_(%).csv",
+        "format": {
+            "type": "csv"
+        }
+    },
+    "transform": [
+        { "fold": ["NSW", "Vic", "Qld", "SA", "WA", "Tas", "NT", "ACT", "Australia"],
+          "as": ["State", "Percentage"]
+        }
+    ],
+    "mark": "bar",
+    "encoding": {
+        "x": {"field": "State", "type": "nominal", "axis": {"title": "State"}},
+        "y": {"field": "Percentage", "type": "quantitative", "axis": {"title": "Percentage (%)"}},
+        "color": {"field": "Proportion of people with long-term health conditions (%)", "type": "nominal", "legend": {"title": "Condition"}}
+    }
+}

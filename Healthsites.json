@@ -3,7 +3,9 @@
   "width": 900,
   "height": 500,
   "title": "Healthsites of Australia 2023-2024",
-  "projection": {"type": "equirectangular"},
+  "projection": {
+    "type": "equirectangular"
+  },
   "layer": [
     {
       "data": {
