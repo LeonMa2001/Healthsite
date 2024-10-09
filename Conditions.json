@@ -1,28 +1,40 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Proportion of people with long-term health conditions (%) across states",
+    "description": "Proportion of people with long-term health conditions across Australian states",
     "data": {
         "url": "https://raw.githubusercontent.com/LeonMa2001/Healthsite/refs/heads/main/Proportion%20of%20people%20with%20long-term%20health%20conditions%20(%25).csv",
-        "format": {
-            "type": "csv"
-        }
+        "format": {"type": "csv"}
     },
+    "transform": [
+        {
+        "fold": ["NSW", "Vic", "Qld", "SA", "WA", "Tas", "NT", "ACT", "Australia"],
+        "as": ["State", "Proportion"]
+        }
+    ],
     "mark": "bar",
     "encoding": {
         "x": {
-            "field": "State",
-            "type": "nominal",
-            "axis": {"title": "State"}
+        "field": "State",
+        "type": "nominal",
+        "title": "State/Territory",
+        "axis": {"labelAngle": 0}
         },
         "y": {
-            "field": "Percentage",
-            "type": "quantitative",
-            "axis": {"title": "Percentage (%)"}
+        "field": "Proportion",
+        "type": "quantitative",
+        "title": "Proportion (%)"
         },
         "color": {
-            "field": "Condition",
-            "type": "nominal",
-            "legend": {"title": "Condition"}
+        "field": "State",
+        "type": "nominal",
+        "legend": null
+        },
+        "column": {
+        "field": "Proportion of people with long-term health conditions (%)",
+        "type": "nominal",
+        "title": "Health Condition"
         }
-    }
+    },
+    "height": 300,
+    "width": 100
 }
