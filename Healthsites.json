@@ -4,8 +4,51 @@
   "height": 500,
   "title": "Healthsites of Australia 2023-2024",
   "projection": {
-    "type": "equirectangular"
+      "type": "equirectangular",
+      "center": { "expr": "center_to" },
+      "scale": { "expr": "zoom_level" }
   },
+  "params": [
+    {
+      "name": "AmenityFilter",
+      "value": "All",
+      "bind": {
+        "input": "select",
+        "options": ["All", "doctors", "clinic", "pharmacy", "hospital", ""],
+        "name": "Select Amenity: "
+      }
+    },
+    {
+      "name": "zoom_level",
+      "value": 800,
+      "bind": {
+          "input": "range",
+          "min": 1000,
+          "max": 4000,
+          "step": 100,
+          "name": "Zoom: "
+      }
+    },
+    {
+        "name": "center_to",
+        "value": [132, -27.2],
+        "bind": {
+            "input": "select",
+            "options": [
+                [132, -27.2],
+                [144.964600, -37.020100],
+                [132.550964, -19.491411],
+                [136.209152, -30.000233],
+                [117.793221, -25.042261],
+                [142.702789, -20.917574],
+                [145.612793, -31.840233],
+                [146.8087, -42.0409]
+            ],
+            "labels": ["Australia", "Victoria", "Northern Territory", "South Australia", "Western Australia", "Queensland", "New South Wales", "Tasmania"],
+            "name": "Map Centre: "
+        }
+    }
+  ],
   "layer": [
     {
       "data": {
@@ -48,17 +91,6 @@
           },
           "legend": {"title": "Amenity Type"}
         }
-      }
-    }
-  ],
-  "params": [
-    {
-      "name": "AmenityFilter",
-      "value": "All",
-      "bind": {
-        "input": "select",
-        "options": ["All", "doctors", "clinic", "pharmacy", "hospital", ""],
-        "name": "Select Amenity: "
       }
     }
   ]
