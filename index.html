@@ -19,38 +19,49 @@
             color: white;
             padding: 20px;
             text-align: left;
+            margin: 0;
         }
 
         #container {
             display: flex;
             flex-direction: row;
             height: calc(100vh - 60px);
+            padding: 40px;
+            background-color: lightgray;
         }
 
         #HealthsitesMap {
             flex: 2;
             height: 100%;
+            width: 100%;
         }
 
         #rightDiv {
             flex: 1;
-            background-color: lightgray;
+            background-color: white;
             padding: 20px;
-            height: 85%;
+            height: 586px;
             overflow-y: auto;
+            border: 1px solid #ccc;
+            margin-right: 20px;
         }
 
         #splitContainer {
             display: flex;
             background-color: lightgray;
-            padding: 20px;
-            margin-top: 20px;
+            padding: 40px;
         }
 
         .splitDiv {
             flex: 1;
             padding: 10px;
             border: 1px solid #ccc;
+            margin-right: 20px;
+            background-color: white;
+        }
+
+        .splitDiv:last-child {
+            margin-right: 0;
         }
 
         #ConditionsChart {
@@ -64,10 +75,12 @@
         }
     </style>
 
-    <title>Healthsites of Australia</title>
+    <title>Healthsite Needability/Accessability in Australia</title>
 </head>
 
 <body>
+    <h1 style="background-color: lightgray; text-align: center; color: black; font-size: 50px;">Healthsite Needability/Accessability in Australia</h1>
+
     <h1>Healthsites Of Australia</h1>
 
     <div id="container">
@@ -76,35 +89,54 @@
 
         <div id="rightDiv">
             <h2>Healthsite Mapped on Australia</h2>
-            <p>
+            <p style="font-size: 20px;">
                 This map visualisation initially illustrates all of the accumulated data 
-                points of healthsites listed in the dataset. It plots it onto the Australian 
-                map which also includes filters to be able to search for specific healthsite 
-                types.
+                points of healthsites listed in the dataset. It plots it onto the map of 
+                Australia, which also includes filters to be able to search for specific 
+                healthsite types, as well as filter between the centred state.
             </p>
+            <br>
+            <ul style="font-size: 20px;">
+                <li>The select Amenity option allows filtering between amenities healthsites 
+                    specialize in, with said options being: Doctors, Clinics, Pharmacies, 
+                    Hospitals, and unspecified.</li>
+                <li>The Zoom option allows zooming of the map to look further or closer to 
+                    the selected centre.</li>
+                <li>The Map Centre option allows toggling between all different states of 
+                    Australia, allowing an interactive toggle on which area is focussed on, 
+                    working in conjunction with the Zoom option.</li>
+                <li>To reset the view to Australia, change zoom to 1000 (min) and set the 
+                    Map Centre option to "Australia".</li>
+            </ul>
         </div>
     </div>
 
-    <h1>Need for healthsites per state</h1>
+    <h1>Health Conditions and Factors by state</h1>
 
     <div id="splitContainer">
         <div class="splitDiv">
-            <h3>Left Div</h3>
+            <h3>Health Conditions by state</h3>
             <div id="ConditionsChart"></div>
-            <p>This is a graph that indicate the percentage of conditions, each state's residents 
-                hold. The graph indicates the percentage of the total population's health conditions 
-                and compares it with each other state as well as the country average.</p>
+            <p style="font-size: 30px;">
+                This graph shows the proportion of people in Australia with various long-term 
+                health conditions by state. Users can choose a specific condition from a dropdown, 
+                updating the chart to display the percentage affected in each state. This helps 
+                compare how health conditions vary regionally, highlighting trends and disparities. 
+                The national average is also shown for broader context.</p>
         </div>
         <div class="splitDiv">
-            <h3>Right Div</h3>
+            <h3>Health Factors by state</h3>
             <div id="HealthFactorChart"></div>
-            <p>This is a graph that indicate the percentage of health factors, each state's residents 
-                inhibit. The graph indicates the percentage of the total population's health conditions
-                in reference to a breach in health factors, whether it be a specific factor or a health
-                behavioural recommendation that has been breached.
-            </p>
+            <p style="font-size: 30px;">
+                This graph displays the percentage of adults (18+) with health risk factors across 
+                Australian states, such as smoking or dietary habits. Each bar represents a different 
+                risk factor, enabling comparison between states and against the national average. 
+                It highlights key public health concerns and regional differences.</p>
         </div>
     </div>
+    
+
+    <h1>Final dataset</h1>
 
     <script src="Healthsites.js"></script>
     <script src="Conditions.js"></script>

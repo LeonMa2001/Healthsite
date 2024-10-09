@@ -1,40 +1,71 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Proportion of people with long-term health conditions across Australian states",
+    "description": "Proportion of people with long-term health conditions across Australian states with dropdown selection",
     "data": {
         "url": "https://raw.githubusercontent.com/LeonMa2001/Healthsite/refs/heads/main/Proportion%20of%20people%20with%20long-term%20health%20conditions%20(%25).csv",
         "format": {"type": "csv"}
     },
+    "params": [
+        {
+            "name": "selectedCondition",
+            "value": "Arthritis",
+            "bind": {
+                "input": "select",
+                "options": [
+                    "Arthritis",
+                    "Asthma",
+                    "Back problems",
+                    "Cancer",
+                    "Chronic Obstructive Pulmonary Disease (COPD)",
+                    "Diabetes",
+                    "Hay fever and allergic rhinitis",
+                    "Heart, stroke and vascular disease",
+                    "Hypertension",
+                    "Kidney disease",
+                    "Mental and behavioural conditions",
+                    "Osteoporosis"
+                ],
+                "name": "Select Health Condition: "
+            }
+        }
+    ],
     "transform": [
         {
-        "fold": ["NSW", "Vic", "Qld", "SA", "WA", "Tas", "NT", "ACT", "Australia"],
-        "as": ["State", "Proportion"]
+            "fold": ["NSW", "Vic", "Qld", "SA", "WA", "Tas", "NT", "ACT", "Australia"],
+            "as": ["State", "Proportion"]
+        },
+        {
+            "calculate": "datum['Proportion of people with long-term health conditions (%)'] == selectedCondition ? datum['Proportion'] : null",
+            "as": "FilteredProportion"
+        },
+        {
+            "filter": "datum.FilteredProportion !== null"
         }
     ],
     "mark": "bar",
     "encoding": {
         "x": {
-        "field": "State",
-        "type": "nominal",
-        "title": "State/Territory",
-        "axis": {"labelAngle": 0}
+            "field": "State",
+            "type": "nominal",
+            "title": "State/Territory",
+            "axis": {"labelAngle": 0},
+            "sort": ["Australia", "NSW", "Vic", "Qld", "SA", "WA", "Tas", "NT", "ACT"]
         },
         "y": {
-        "field": "Proportion",
-        "type": "quantitative",
-        "title": "Proportion (%)"
+            "field": "FilteredProportion",
+            "type": "quantitative",
+            "title": "Proportion (%)"
         },
         "color": {
-        "field": "State",
-        "type": "nominal",
-        "legend": null
+            "field": "State",
+            "type": "nominal",
+            "legend": null
         },
-        "column": {
-        "field": "Proportion of people with long-term health conditions (%)",
-        "type": "nominal",
-        "title": "Health Condition"
-        }
+        "tooltip": [
+            {"field": "State", "type": "nominal", "title": "State"},
+            {"field": "FilteredProportion", "type": "quantitative", "title": "Proportion (%)"}
+        ]
     },
-    "height": 300,
-    "width": 100
+    "height": 600,
+    "width": "container"
 }
