@@ -1,34 +1,40 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Proportion of adults aged 18 years and over by health risk factors (%) across states",
+    "description": "Proportion of adults aged 18 years and over by health risk factors across Australian states",
     "data": {
         "url": "https://raw.githubusercontent.com/LeonMa2001/Healthsite/refs/heads/main/Proportion%20of%20adults%20aged%2018%20years%20and%20over%20by%20health%20risk%20factors%20(%25).csv",
-        "format": {
-            "type": "csv"
-        }
+        "format": {"type": "csv"}
     },
     "transform": [
-        {
-            "fold": ["NSW", "Vic", "Qld", "SA", "WA", "Tas", "NT", "ACT", "Australia"],
-            "as": ["State", "Percentage"]
-        }
+      {
+        "fold": ["NSW", "Vic", "Qld", "SA", "WA", "Tas", "NT", "ACT", "Australia"],
+        "as": ["State", "Proportion"]
+      }
     ],
     "mark": "bar",
     "encoding": {
-        "x": {
-            "field": "State",
-            "type": "nominal",
-            "axis": {"title": "State"}
-        },
-        "y": {
-            "field": "Percentage",
-            "type": "quantitative",
-            "axis": {"title": "Percentage (%)"}
-        },
-        "color": {
-            "field": "Condition",
-            "type": "nominal",
-            "legend": {"title": "Condition"}
-        }
-    }
-}
+      "x": {
+        "field": "State",
+        "type": "nominal",
+        "title": "State/Territory",
+        "axis": {"labelAngle": 0}
+      },
+      "y": {
+        "field": "Proportion",
+        "type": "quantitative",
+        "title": "Proportion (%)"
+      },
+      "color": {
+        "field": "State",
+        "type": "nominal",
+        "legend": null
+      },
+      "column": {
+        "field": "Proportion of adults aged 18 years and over by health risk factors (%)",
+        "type": "nominal",
+        "title": "Health Risk Factor"
+      }
+    },
+    "height": 300,
+    "width": 100
+  }
