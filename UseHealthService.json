@@ -1,0 +1,52 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Proportion of people 15 years and over who used selected health services in the last 12 months by age group.",
+    "data": {
+      "url": "path/to/your/dataset.csv",
+      "format": {"type": "csv"}
+    },
+    "transform": [
+      {
+        "fold": [
+          "Saw a GP (%)",
+          "Saw a dental professional(a) (%)",
+          "Saw a medical specialist (%)",
+          "Visited a hospital ED (%)",
+          "Saw a GP for urgent medical care (%)",
+          "Admitted to hospital (%)",
+          "Saw an after hours GP (%)"
+        ],
+        "as": ["Health Service", "Proportion"]
+      }
+    ],
+    "mark": {
+      "type": "line",
+      "interpolate": "monotone",
+      "point": true
+    },
+    "encoding": {
+      "x": {
+        "field": "Age (years)",
+        "type": "ordinal",
+        "title": "Age Group"
+      },
+      "y": {
+        "field": "Proportion",
+        "type": "quantitative",
+        "title": "Proportion (%)"
+      },
+      "color": {
+        "field": "Health Service",
+        "type": "nominal",
+        "title": "Health Service"
+      },
+      "tooltip": [
+        {"field": "Age (years)", "type": "ordinal", "title": "Age Group"},
+        {"field": "Health Service", "type": "nominal", "title": "Health Service"},
+        {"field": "Proportion", "type": "quantitative", "title": "Proportion (%)"}
+      ]
+    },
+    "height": 400,
+    "width": "container"
+  }
+  
