@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="author" content="Leon Ma">
+    <meta name="description" content="Data visualization project illustrating healthsite accessibility and needability across Australia, along with various health conditions and factors by state.">
+    <meta name="keywords" content="Healthsite, Australia, data visualization, healthcare, health services, public health, health conditions, risk factors">
+
     <script src="https://cdn.jsdelivr.net/npm/vega@5.30.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.21.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.26.0"></script>
@@ -73,13 +77,19 @@
             width: 100%;
             height: 400px;
         }
+
+        #UseHealthServiceChart {
+            flex: 2;
+            width: 100%;
+            height: 400px;
+        }
     </style>
 
-    <title>Healthsite Needability/Accessability in Australia</title>
+    <title>Healthsite Needability/Accessibility in Australia</title>
 </head>
 
 <body>
-    <h1 style="background-color: lightgray; text-align: center; color: black; font-size: 50px;">Healthsite Needability/Accessability in Australia</h1>
+    <h1 style="background-color: lightgray; text-align: center; color: black; font-size: 50px;">Healthsite Needability/Accessibility in Australia</h1>
 
     <h1>Healthsites Of Australia</h1>
 
@@ -136,7 +146,37 @@
     </div>
     
 
-    <h1>Final dataset</h1>
+    <h1>Current Health Service Usage</h1>
+
+    <div id="container">
+        <div id="UseHealthServiceChart">
+        </div> 
+
+        <div id="rightDiv" style="height: 450px;">
+            <h2>Health Service Usage by age group</h2>
+            <p style="font-size: 20px;">
+                This stacked line chart illustrates the proportion of people aged 15 years and over 
+                who used selected health services in the past 12 months, categorized by age groups. 
+                The chart tracks key health services such as General Practitioner (GP) visits, dental 
+                professional consultations, medical specialist appointments, and hospital visits. Each 
+                line represents a different service, allowing users to observe patterns and trends 
+                across various age groups. The chart highlights how the use of health services increases 
+                with age, offering insight into healthcare needs across the Australian population.
+            </p>
+        </div>
+    </div>
+
+    <footer style="font-size: 10px; background-color: darkgray; padding: 20px; margin: 0;">
+        <p>Created by: Leon Ma</p>
+        <p>Purpose: This data visualisation was created to help visualise the current health site accessibility as well as related health statistics in Australia</p>
+        <p>References:
+            <ul>
+                <li><a href="https://data.humdata.org/dataset/australia-healthsites">Australia Healthsites - Humanitarian Data Exchange</a></li>
+                <li><a href="https://www.abs.gov.au/statistics/health/health-conditions-and-risks/national-health-survey-state-and-territory-findings/latest-release">National Health Survey: State and Territory Findings - Australian Bureau of Statistics</a></li>
+                <li><a href="https://www.aihw.gov.au/reports-data/australias-health-performance/australias-health-performance-framework/national/all-australia/effectiveness/effectiveness/2_1_5">Australia's Health Performance Framework - Australian Institute of Health and Welfare</a></li>
+            </ul>
+        </p>
+    </footer>
 
     <script src="Healthsites.js"></script>
     <script src="Conditions.js"></script>
