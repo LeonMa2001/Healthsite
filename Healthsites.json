@@ -14,7 +14,7 @@
       "value": "All",
       "bind": {
         "input": "select",
-        "options": ["All", "Doctors", "Clinic", "Pharmacy", "Hospital", "Undefined"],
+        "options": ["All", "doctors", "clinic", "pharmacy", "hospital", ""],
         "name": "Select Amenity: "
       }
     },
